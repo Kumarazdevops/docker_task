@@ -4,7 +4,7 @@ pipelin {
   stages{
     stage('clone'){
       steps{
-        git branch : 'main', url: 'https://github.com/Kumarazdevops/docker_task.git'
+        git branch : 'master', url: 'https://github.com/Kumarazdevops/docker_task.git'
       }
     }
     stage('Build image'){
