@@ -1,6 +1,11 @@
 pipeline {
   agent any
 
+
+  environment {
+        DOCKER_IMAGE = 'myimage:latest'
+    }
+
   stages{
     stage('clone'){
       steps{
@@ -9,10 +14,8 @@ pipeline {
     }
     stage('Build image'){
       steps{
-        script{
-        bat 'docker built -t my image .'
+        bat 'docker built -t myimage .'
         echo "build image"
-        }
       }
     }
   }
