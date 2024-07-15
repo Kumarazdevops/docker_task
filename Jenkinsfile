@@ -7,11 +7,6 @@
                 git credentialsId: 'Kumarazdevops' , url: 'https://github.com/Kumarazdevops/docker_task.git'
             }
         }
-        stage('print'){
-            steps {
-                bat 'type Dockerfile'
-            }
-        }
         stage('Build') {
             steps{
                 bat 'docker build -t taskimage .'
