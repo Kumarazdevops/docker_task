@@ -10,7 +10,6 @@
         stage('Build') {
             steps{
                 bat 'docker build -t taskimage .'
-                bat 'docker run -d --name taskcount -p 8072:80 taskimage'
             }
         }
     }
