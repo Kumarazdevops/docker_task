@@ -9,7 +9,7 @@ pipelin {
     }
     stage('Build image'){
       steps{
-        sh 'docker build -t myimage2 .'
+        bat 'docker build -t myimage2 .'
       }
     }
   }
